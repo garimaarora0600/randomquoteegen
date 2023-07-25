@@ -13,7 +13,7 @@ body{
     background: #f6300d;
 }
 
-/* it creating a box having quote of the day and its contents */
+/*creating a box like structure which fit all the contents */
 .wrapper{
     width: 600px;
     background: #fff;
@@ -29,7 +29,7 @@ body{
     text-align: center;
 }
 
-/* content class is a wrapper class or container which contains quote area class i,e quote and icons */
+/* content class is a wrapper class or conainer which contains quote area class i,e quote and icons */
 .wrapper .content{
     margin: 35px 0;
 }
@@ -37,7 +37,7 @@ body{
 /* to modify the icons containing double quotes */
 .content .quote-area{
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 .quote-area i{
     font-size: 15px;
@@ -51,15 +51,14 @@ body{
 
 .quote-area i:last-child{
     display: flex;
-    /* the items are positioned at the end of center */
     align-items: flex-end;
-    /* top-right-bottom-left */
-    margin: 0 0 13px 10px;
+    margin: 0 0 3px 10px;
 }
 /* to modify the quote */
 .quote-area .quote{
     font-size: 22px;
     text-align: center;
+    /* word-break: break-all; */
 }
 
 /* to modify the author part */
@@ -82,20 +81,20 @@ body{
 
 /* features class contain all the font awesome icons and buttons */
 .buttons .features{
-    display: flex; /* make both button and icons on same line */
+    display: flex; /*make both button and icons on same line*/
     align-items: center;
     margin-top: 20px;
     justify-content: space-between;
 }
 .features ul{
-    display: flex; /*flex icons on same row*/
+    display: flex;
 
 }
 
 .features ul li{
     list-style: none;
     margin: 0 5px;  /*every list item will be 5 px from left, that is it'll create space between all the icons as diplay: flex made all icons at same line without having any space*/
-    height: 47px; /* it refers to the height of the icons*/
+    height: 47px; /* it refers to the height of the space below line*/
     width: 47px; /* it'll make width 47px*/
     color:#f6300d;
     display: flex;
@@ -114,6 +113,7 @@ body{
 }
 .features button{
     border:none; /* remove all the by default created decorations*/
+    /* removes the default focus outline from an element when it is active or focused. */
     outline: none;
     /* top-bottom & left-right */
     padding: 13px 22px;
@@ -127,8 +127,9 @@ body{
 button.loading{
     opacity: 0.7;
     pointer-events: none; /*making no pointer at the time of loading*/
-} /*but this will make new quote opacity and pointer-events to none even after the quote has been generated,
- so to get back so that we can again click on button, we need to add a little bit in js*/
+} /*but this will make new quote opacity and pointer-even to none even after the quote has been generated, so to get back so that we can again click on button, we need to add a little bit in js*/
+
+
 /* Mobile Devices */
 @media only screen and (max-width: 600px) {
   .wrapper {
